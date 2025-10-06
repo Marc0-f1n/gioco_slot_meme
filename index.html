@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <title>Slot Machine</title>
+        <link rel="stylesheet" href="style.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap"
+            rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <h1>🎰 UNEMPLOYED LUDOPATIA 🎰</h1>
+
+            <!-- Schermata iniziale -->
+            <div id="start-screen">
+                <button id="btn-regole">📜 Regole</button>
+                <button id="btn-inserisci">💰 Inserisci Monete</button>
+                <button id="btn-gioca" disabled>🎮 Gioca</button>
+            </div>
+
+            <!-- Area gioco -->
+            <div id="game-screen" class="hidden">
+                <div class="slot">
+                    <span id="s1">❔</span>
+                    <span id="s2">❔</span>
+                    <span id="s3">❔</span>
+                </div>
+                <button id="play">Gira</button>
+                <p id="result"></p>
+                <p id="coins">Monete: <span id="monete">0</span></p>
+            </div>
+
+            <!-- Schermata Game Over -->
+            <div id="game-over" class="hidden">
+                <h2>💸 Game Over!</h2>
+                <p>Hai finito le monete.</p>
+                <p>Ritorno al menu iniziale...</p>
+            </div>
+
+            <!-- Regole -->
+            <div id="regole" class="hidden">
+                <h2>📜 Regole</h2>
+                <ul>
+                    <li>Ogni partita costa 1 moneta.</li>
+                    <li>3 simboli uguali = VINCI 5 monete.</li>
+                    <li>2 simboli uguali = VINCI 2 monete.</li>
+                    <li>Jackpot casuale (1 su 50) = VINCI 10 monete.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Coriandoli -->
+        <div id="confetti-container"></div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
